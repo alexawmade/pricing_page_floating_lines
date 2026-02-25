@@ -1,0 +1,204 @@
+.pricing-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  width: 320px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 32px 28px 28px;
+  transition: border-color 0.25s ease, background 0.35s ease;
+}
+
+.pricing-card:hover {
+  border-color: var(--border-hover);
+}
+
+/* Badge */
+.pricing-card__badge {
+  position: absolute;
+  top: -13px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(90deg, #6c63ff, #b44af5);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 4px 14px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+/* Header */
+.pricing-card__header {
+  margin-bottom: 24px;
+}
+
+.pricing-card__name {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--t1);
+  margin-bottom: 6px;
+  letter-spacing: -0.02em;
+}
+
+.pricing-card__tagline {
+  font-size: 13px;
+  color: var(--t4);
+  line-height: 1.5;
+}
+
+/* Price */
+.pricing-card__price-row {
+  display: flex;
+  align-items: flex-end;
+  gap: 2px;
+  margin-bottom: 28px;
+}
+
+.pricing-card__currency {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--t6);
+  line-height: 1;
+  padding-bottom: 6px;
+}
+
+.pricing-card__amount {
+  font-size: 42px;
+  font-weight: 700;
+  color: var(--t1);
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.pricing-card__period {
+  font-size: 14px;
+  color: var(--t8);
+  padding-bottom: 8px;
+  padding-left: 2px;
+}
+
+/* Custom price (Enterprise) */
+.pricing-card__custom-price {
+  font-size: 42px;
+  font-weight: 700;
+  color: var(--t1);
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+/* Features */
+.pricing-card__features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  margin-bottom: 32px;
+  flex: 1;
+  border-top: 1px solid var(--border-feat);
+  padding-top: 20px;
+}
+
+.pricing-card__features-label {
+  font-size: 12px;
+  color: var(--t7);
+  margin-bottom: 2px;
+}
+
+.pricing-card__feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 13.5px;
+  color: var(--t5);
+  line-height: 1.4;
+}
+
+.pricing-card__feature--disabled {
+  color: var(--t9);
+}
+
+.pricing-card__feature-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  font-size: 10px;
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 1px;
+  background: var(--icon-bg);
+  color: var(--icon-color);
+}
+
+.pricing-card__feature--disabled .pricing-card__feature-icon {
+  background: var(--icon-dis-bg);
+  color: var(--icon-dis-color);
+}
+
+.pricing-card__feature-sub {
+  font-size: 11.5px;
+  color: var(--t8);
+}
+
+/* CTA — base */
+.pricing-card__cta {
+  width: 100%;
+  padding: 13px 0;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  letter-spacing: 0.01em;
+  font-family: inherit;
+}
+
+/* default */
+.pricing-card__cta--default {
+  border: 1px solid var(--cta-ghost-border);
+  background: var(--cta-ghost-bg);
+  color: var(--cta-ghost-color);
+}
+.pricing-card__cta--default:hover {
+  background: var(--cta-ghost-bg-h);
+  border-color: var(--cta-ghost-border-h);
+  color: var(--cta-ghost-color-h);
+}
+
+/* disabled (Free — "Current plan") */
+.pricing-card__cta--disabled {
+  border: 1px solid var(--cta-dis-border);
+  background: var(--cta-dis-bg);
+  color: var(--cta-dis-color);
+  cursor: default;
+}
+
+/* outline (Enterprise — "Contact Us") */
+.pricing-card__cta--outline {
+  border: 1px solid rgba(108, 99, 255, 0.45);
+  background: transparent;
+  color: #a78bfa;
+}
+.pricing-card__cta--outline:hover {
+  background: rgba(108, 99, 255, 0.1);
+  border-color: rgba(108, 99, 255, 0.7);
+  color: #c4b5fd;
+}
+
+/* Light mode outline adjustments */
+.page--light .pricing-card__cta--outline {
+  color: #6c63ff;
+  border-color: rgba(108, 99, 255, 0.35);
+}
+.page--light .pricing-card__cta--outline:hover {
+  background: rgba(108, 99, 255, 0.08);
+  border-color: rgba(108, 99, 255, 0.6);
+  color: #4a42c0;
+}

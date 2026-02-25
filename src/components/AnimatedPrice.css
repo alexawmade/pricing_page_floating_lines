@@ -1,0 +1,38 @@
+/* Wrapper — inline-flex keeps digits side by side, aligned to top */
+.ap-price {
+  display: inline-flex;
+  align-items: flex-start;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Per-digit "window" with overflow hidden */
+.ap-digit {
+  display: inline-block;
+  overflow: hidden;
+  height: 1em;
+  line-height: 1;
+  vertical-align: top;
+}
+
+/* The reel: all 10 digits stacked, translated to reveal the right one.
+   cubic-bezier(0.15, 1, 0.3, 1) = quick burst → smooth glide to stop */
+.ap-reel {
+  display: block;
+  transition: transform 0.38s cubic-bezier(0.15, 1, 0.3, 1);
+  will-change: transform;
+}
+
+/* Each digit occupies exactly 1em of height */
+.ap-reel__item {
+  display: block;
+  height: 1em;
+  line-height: 1;
+  text-align: center;
+}
+
+/* Non-digit chars (if ever needed) */
+.ap-static {
+  display: inline-block;
+  vertical-align: top;
+  line-height: 1;
+}
