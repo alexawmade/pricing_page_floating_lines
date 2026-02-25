@@ -14,6 +14,17 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Hide scrollbars globally while keeping scroll functionality */
+html, body {
+  scrollbar-width: none;        /* Firefox */
+  -ms-overflow-style: none;     /* IE / Edge */
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;                /* Chrome, Safari, Opera */
+}
+
 body {
   min-height: 100vh;
   background: #0a0a0f;
