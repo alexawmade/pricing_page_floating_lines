@@ -40,13 +40,3 @@ The animated wave background is powered by a custom Three.js WebGL fragment shad
 - **Three.js** — WebGL fragment shader via a stable `propsRef` render loop
 - Plain **CSS** with custom properties — no CSS-in-JS, no utility framework
 
----
-
-## Getting Started
-
-```bash
-npm install
-npm run dev
-```
-
-Drop a screenshot named `preview.png` in the project root to populate the image at the top of this file.
